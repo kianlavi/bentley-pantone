@@ -1,0 +1,1002 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+
+/* Reset & Basics (Inspired by E. Meyers and Kian Lavi)
+================================================== */
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, address, cite, code, em, img, small, strong, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, embed, figure, figcaption, footer, header, hgroup, menu, nav, section, summary, time, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, time, nav, section {
+  display: block; }
+html, body, .wrapper {
+  min-height: 100%;
+}
+
+
+/* Body
+================================================== */
+html, body {
+  height: 100%;
+}
+.wrapper {
+  min-height: 100%;
+}
+body {
+  overflow-x: hidden;
+  font: 17px/28px PT Serif, "Georgia", serif;
+  color: #333;
+  background: #e4e4e4;
+}
+hr { border-bottom: 1px solid rgb(37,37,37); border-style: double; width: 85%; margin-bottom: 1em;}
+
+
+
+/* Typography
+================================================== */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "gotham" "proxima-nova", "helvetica neue", "helvetica", sans-serif;
+  font-weight: normal;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #000;
+  text-rendering: optimizeLegibility;
+}
+
+h1 { font-size: 2em; padding-bottom: 0.5em;}
+h2 { font-size: 1.5em; } 
+h3 { font-size: 1em; }
+
+p {
+  margin: 0 0 28px 0;
+}
+
+strong {
+  font-weight: bold;
+}
+em {
+  font-style: italic;
+}
+sup {
+  line-height: 0;
+}
+
+@font-face {
+  font-family: "Gotham";
+  src: url(Gotham-Bold.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Gotham Black";
+  src: url(Gotham-Black.ttf) format("truetype");
+}
+@font-face {
+  font-family: "Gotham Medium";
+  src: url(Gotham-Medium.ttf) format("truetype");
+}
+
+/* Teaser
+================================================== */
+
+header#teaser h1 {
+  text-transform: none !important;
+  color: #333;
+  font-size: 28px !important;
+  font-weight: 300 !important;
+}
+
+
+/* Links
+================================================== */
+a {
+  color: #b20f1f;
+  text-decoration: none;
+  -webkit-transition: all .2s ease-in-out;
+     -moz-transition: all .2s ease-in-out;
+          transition: all .2s ease-in-out;
+}
+a:hover {
+  color: #8d0d19;
+}
+
+div.art-body-inner > p > a {
+  color: rgb(37,37,37);
+  text-decoration: none;
+  border-bottom: 1px solid #59deff;
+  box-shadow: inset 0 -4px 0 #59deff;
+}
+
+div.art-body-inner > p > a:hover {
+  color: rgb(37,37,37);
+  text-decoration: none;
+  border-bottom: 1px solid #4BC3E0;
+  box-shadow: inset 0 -4px 0 #4BC3E0;
+}
+
+/*  Sidebar
+================================================== */
+
+
+#sidebar {
+  width: 14vw;
+  position: fixed;
+  margin-left: -2em;
+  text-align: right;
+}
+
+logo {
+	background: #59deff;
+	color: white;
+	display: block;
+	font-weight: 600!important;
+	width: 70%;
+	text-align: center;
+	float: right;
+	border-bottom: 0.em solid #47BBD8;
+	margin-bottom: 16px;
+	padding-top: 9em;
+	margin-top: -6em;
+	font: 48px/1em Source Sans Pro;
+}
+logo:hover{}
+
+p#logo {float:none!important;}
+
+#sideLogo {
+  width: 95px; 
+  }
+#sideTitle {
+  font-size: 4em;
+  line-height: 0.7em;
+  font-family: Source Sans Pro;
+  color: rgb(37, 37, 37); 
+  text-rendering: optimizeLegibility; 
+  font-weight: 700;
+  
+}
+#sideCaption {
+  font: 1em/1em Source Sans Pro;
+  font-weight: 100;
+  color: rgba(37, 37, 37, 0.5); 
+  padding-top: 1em;
+}
+
+div#sidebar > p {
+  margin: 0;
+}
+
+.sideResume {
+  padding: 2em 0!important;
+  color: rgb(37, 37, 37)!important; 
+  font-weight: 100;
+  font: 1.25em/1em Source Sans Pro;
+}
+p.sideResume > a {
+  color: rgb(37, 37, 37);
+  font-weight: 700;   
+  -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+}
+p.sideResume > a:hover {
+  color: #fff;
+  background: #59deff; 
+  padding-left: 1em;
+}
+.sideLinks {
+  color: rgb(37, 37, 37)!important; 
+  font-weight: 100!important;
+  font: 1em/1.25em Source Sans Pro;
+}
+.sideLinks > a:hover {
+  color: #fff!important; 
+  background: #59deff; 
+  padding-left: 1em; 
+}
+.sideLinks > a {
+  color: rgba(37,37,37,0.5)!important; 
+    -webkit-transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
+
+}
+
+.sideLinks::before {
+  padding-top: 3em!important;
+}
+
+
+/*  Layout
+================================================== */
+/* White container that is the "page" */
+.wrapper {
+  max-width: 1500px;
+  margin: 0 auto;
+  background: #fff;
+}
+
+/* Containers to keep content to a set width */
+.nav,
+.art-header-inner,
+.footer,
+.art-list,
+.abt,
+.fourohfour {
+  width: 980px;
+}
+.nav,
+.art-body-inner,
+.footer,
+.art-list,
+.abt,
+.fourohfour {
+  position: relative;
+  margin: 0 auto;
+}
+
+/*  Nav
+================================================== */
+.nav {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  height: 70px;
+  padding-top: 40px;
+  margin-left: -490px; /* Half width of nav */
+  border-bottom: 1px solid #333;
+  z-index: 2;
+}
+.nav.fixed {
+  position: fixed;
+}
+#logo {
+  float: left;
+}
+.nav-primary {
+  float: right;
+}
+.nav-primary li {
+  display: inline-block;
+  margin-left: 10px;
+  font-weight: 500;
+}
+#logo h1,
+.nav-primary li,
+.nav-primary li a {
+  font-family: "Gotham Medium" "proxima-nova", "helvetica neue", "helvetica", sans-serif;
+  font-size: 1em;
+  line-height: 30px;
+  color: #000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+#logo h1 {
+  width: 200px;
+  height: 30px;
+  margin-left: 0px;
+  letter-spacing: 1px;
+}
+
+.nav li:first-child {
+  margin-left: 0; /* Remove left margin from the first nav li */
+}
+
+menu {
+  position: fixed;
+  width: 100%;
+  padding: 2em 0 0em 0;
+  height: 5vh;
+  top: 0;
+  background: #59deff;
+  z-index: 1000;
+  display: none;
+}
+
+menu > h1 { 
+color: white;
+width: 30%;
+margin: 0 auto;
+padding: 0;
+}
+
+
+/* Home Page 
+================================================== */
+
+div#home {
+  padding: 60px; 
+}
+
+#home > div.cover {
+  max-width: 980px;
+  margin: 0px auto;
+  /*padding-top: 110px;*/
+}
+
+div.cover {
+
+}
+
+div.cover > img {
+  width: 100%;
+  height: 100%;
+}
+
+
+/*  Article
+================================================== */
+
+.art {
+  margin-top: -131px;
+}
+/* Header */
+.art-header {
+  height: 900px;
+  /* Background image is defined in the post */
+  background-position: top center;
+  background-attachment: fixed;
+  overflow: hidden;
+}
+/* Contains the time, title and subtitle for an article */
+.art-header-inner {
+  position: fixed;
+  top: 300px;
+  left: 50%;
+  margin-left: -490px;
+}
+.art-time,
+.art-title,
+.art-subtitle {
+  text-align: center;
+  text-transform: uppercase;
+}
+.art-time {
+  font-size: 14px;
+  line-height: 1.8;
+  letter-spacing: 4px;
+}
+.art-title {
+  font-size: 100px;
+  line-height: .9;
+  letter-spacing: -2px;
+  width: 100%;
+}
+.art-subtitle {
+  margin-top: 4px;
+  font-size: 14px;
+  line-height: 1.3;
+  letter-spacing: 4px;
+}
+
+/* If small header, make few adjustments */
+.small .art-title {
+  font-size: 70px;
+  line-height: 65px;
+}
+.small.art-header-inner {
+  top: 320px;
+}
+
+/* Body */
+.art-body {
+  position: relative;
+  width: 100%;
+  background: #fff;
+  z-index: 100;
+  -webkit-box-shadow: 0 -3px 3px rgba(0,0,0,.2);
+     -moz-box-shadow: 0 -3px 3px rgba(0,0,0,.2);
+          box-shadow: 0 -3px 3px rgba(0,0,0,.2);
+}
+.art-body-inner {
+  max-width: 640px;
+  padding: 80px 0 50px;
+}
+.art-body-inner ul,
+.art-body-inner ol { /* For lists in the article body */
+  margin: 0em 0em 1em 3em;
+}
+.art-body-inner ul li {
+  list-style: disc;
+}
+
+.art-body-inner mark {
+    background-color: #fdffb6;
+    padding: 2px;
+    -webkit-box-shadow: #fdffb6 0 0 5px;
+    -moz-box-shadow: #fdffb6 0 0 5px;
+    box-shadow: #fdffb6 0 0 5px;
+}
+
+.art-body-inner blockquote {
+  margin: 2em auto;
+  padding: 1em 0; 
+  border-top: 2px solid rgb(37,37,37);
+  border-bottom: 2px solid rgb(37,37,37);
+  font-size: 2em;
+  line-height: 1.25em;
+  font-style: italic; 
+  width: 100%;
+}
+
+.art-body-inner blockquote > p { margin: 0; padding-left: 1em; }
+
+.dropcap { /* First character on articles */
+  float: left;
+  margin: 47px 10px 20px 0;
+  font-size: 100px;
+  line-height: 0;
+}
+.art-subhead { /* Subheads are used to break up sections of an article */
+  margin: 60px 0 15px;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 3px;
+}
+.callout { /* Callouts are like large pullquotes */
+  font-weight: bold;
+}
+.art-body-inner img {
+  max-width: 100%;
+  max-height: 600px;
+  margin: 1em 0;
+}
+.art-body-inner img.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.art-body-inner .art-reference {
+  font-size: 80%;
+  color: #999;
+  margin-top: 50px;
+}
+
+/* For simple, white background posts */
+.simple .art-body {
+  background: none;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+
+
+/*  List of Articles
+================================================== */
+.art-list {
+  width: 63vw!important;
+}
+.art-list-body {
+  position: relative;
+  overflow: hidden;
+}
+
+.art-list-item:first-child {
+  border-top: 10px solid rgb(37, 37, 37);
+}
+.art-list-item {
+  padding: 40px 0;
+  list-style: none;
+  overflow: hidden;
+  border-bottom: 3px solid rgb(37, 37, 37);
+}
+.art-list-item:hover {
+  background: rgb(37, 37, 37);
+
+  }
+.art-list-item:last-child {
+  border-bottom: 10px solid rgb(37, 37, 37);
+}
+.art-list-title {
+  font-size: 48px;
+  line-height: 26px;
+  font-weight: 700;
+  font-family: Gotham;
+  padding-top: 1em;
+}
+
+.art-list-item-title-and-time {
+/*   float: left; */
+  width: 100%;
+  text-align: center; 
+/*   margin-bottom: 10px; */
+}
+.art-list-time {
+  font-size: 12px;
+  line-height: 20px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #999;
+  display: none;
+}
+.whiteOut { 
+  color: white!important; 
+}
+.art-list-title a {
+  color: rgb(37, 37, 37);
+}
+.art-list-title a:hover {
+  color: #b20f1f;
+}
+.art-list-item p {
+  /* 
+width: 65%;
+  float: left;
+  margin-left: 5%;
+ */
+  text-align: center;
+  margin-bottom: 0;
+  font-size: 18px;
+  line-height: 24px;
+  font-family: source sans pro;
+  color: rgba(37,37,37,0.5);
+  font-weight: 100;  
+  padding-top: 1em;
+}
+
+
+/*  Footer
+================================================== */
+.footer {
+  padding: 30px 0 40px;
+  overflow: hidden;
+  border-top: 1px solid #ccc;
+}
+.footer,
+.footer a {
+  font-family: "Gotham Medium", "Helvetica Neue", "helvetica neue", "helvetica", sans-serif;
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #777;
+}
+.footer a:hover {
+  color: #000;
+}
+.back-to-top,
+.footer-nav,
+.offsite-links {
+  width: 33.3%;
+  float: left;
+}
+.footer-nav {
+  text-align: center;
+}
+.offsite-links {
+  text-align: right;
+}
+.footer .twitter-link:hover {
+  color: #0084B4;
+}
+.footer .github-link:hover {
+  color: #c5376d;
+}
+.footer .rss-link:hover {
+  color: #e85d24;
+}
+/* Remove prev & next links on loop */
+.art-list + .footer .footer-nav,
+.abt + .footer .footer-nav {
+  text-indent: -9999px;
+  text-align: left;
+}
+
+
+/*  White Reverse Theme
+================================================== */
+/* Nav */
+.nav.white  {
+  border-bottom-color: #fff;
+  border-bottom-color: rgba(255,255,255,.3);
+}
+.nav.white li a,
+.nav.white li,
+.nav.white #logo h1 {
+  color: #fff;
+  text-shadow: 0 0 8px rgba(0,0,0,.5);
+}
+.nav.white #logo h1 {
+  background-position: top center;
+}
+/* Art header */
+.art-header.white {
+  background-color: #111;
+}
+.art-header.white .art-time,
+.art-header.white .art-title,
+.art-header.white .art-subtitle {
+  color: #fff;
+  text-shadow: 0 0 8px rgba(0,0,0,.5);
+}
+
+
+/*  About page
+================================================== */
+.abt {
+  padding: 200px 0 100px;
+  list-style: none;
+}
+.abt .abt-header {
+  font-size: 140px;
+  line-height: 1;
+  text-transform: none;
+}
+.abt .abt-subheader {
+  font-size: 24px;
+  font-style: italic;
+  text-transform: none;
+  color: #777;
+}
+.abt-body {
+  -moz-column-count: 2;
+  -moz-column-gap: 20px;
+  -webkit-column-count: 2;
+  -webkit-column-gap: 20px;
+  margin-bottom: 28px;
+}
+.abt-signoff {
+  line-height: 1.3;
+  font-style: italic;
+  color: #777;
+}
+
+/*  404 page
+================================================== */
+.fourohfour {
+  padding: 240px 0 100px;
+  text-align: center;
+}
+
+/*  Code
+================================================== */
+
+code, tt {
+background: rgb(37,37,37);
+color: #fff;
+font-size: 90%;
+padding: 0 1em;
+font-family: Courier New;
+}
+
+pre {
+display: block;
+padding: 9.5px;
+margin: 0 0 28px;
+font-size: 90%;
+line-height: 1.428571429;
+word-break: break-all;
+word-wrap: break-word;
+background: rgb(37,37,37);
+color: #fff
+font-family: Courier New;
+}
+
+pre code, tt {
+font-size: inherit;
+white-space: -moz-pre-wrap;
+white-space: pre-wrap;
+background: transparent;
+border: none;
+padding: 0;
+}
+
+
+/*  Responsive
+================================================== */
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen 
+and (orientation: landscape) {
+	.art-header { background-size: cover!important; }
+}
+
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 480px) {
+  
+  .art-header { background-size: cover!important; height: 125vh;} 
+  
+  #sidebar {
+    width: 100%;
+    position: initial;
+    margin-left: 0em;
+    margin-bottom: 3em;
+    text-align: center;
+  }
+  logo {
+    width: 100%;
+    float: none;
+    padding-top: 9em;
+    margin-left: -0.5em;
+    width: 85vw;
+  }
+  
+  .sideResume > a {
+    display: block;
+    padding: 1em 0;
+  }
+  
+  .sideLinks {
+    padding: 0; 
+    }
+    
+  .sideLinksA {
+    display: block;
+    padding: 1em 0;
+  }
+  
+  div.posts { margin-left: -2.5em; }
+  .art-list { width: 86vw!important; }
+  .art-list-item { padding: 0; }
+  .art-list-item > p { display: none; } 
+  .art-list-title { line-height: 1em; padding: 1em 0; }  
+  
+  hr {width: 100%;}
+  
+  blockquote { margin: 1em auto!important; } 
+}
+
+
+
+@media only screen and (max-width: 1080px) {
+  /* Set all of the 980 containers to flexible width */
+  .nav,
+  .art-header-inner,
+  .footer,
+  .art-list,
+  .abt,
+  .fourohfour {
+    width: 90%;
+  }
+  
+  .art-body-inner { width: 85%; } 
+  
+  .nav,
+  .art-header-inner {
+    margin-left: -45%;
+  }
+  
+  .art-header-inner { height: 100vh; top: 45%; } 
+  
+  
+  #sidebar {
+    width: 100%;
+    position: initial;
+    margin-left: 0em;
+    margin-bottom: 3em;
+    text-align: center;
+  }
+  logo {
+    width: 100%;
+    float: none;
+    padding-top: 9em;
+    margin-left: 0em;
+  }
+  
+  .sideResume > a {
+    display: block;
+    padding: 1em 0;
+  }
+  
+  .sideLinks {
+    padding: 0; 
+    }
+    
+  .sideLinksA {
+    display: block;
+    padding: 1em 0;
+  }
+  
+  div.posts { margin-left: -2.5em; }
+  .art-list { width: 86vw!important; }
+  .art-list-item { padding: 0; }
+  .art-list-item > p { display: none; } 
+  .art-list-title { line-height: 1em; padding: 1em 0; }  
+  
+  
+  
+}
+
+/* Don't need this for now
+/**
+/***
+@media only screen and (max-width: 1024px) {
+  Everything becomes scrolling and non-fading  .nav,
+  .nav.fixed {
+    position: relative;
+    opacity: 1 !important; Important to override JS values    display: inline-block;
+  }
+  .art-header-inner {
+    position: relative;
+    top: 0 !important; Important to override JS values    margin-top: 240px !important; Important to override JS values    opacity: 1 !important; Important to override JS values  }
+  Articles no longer have fixed heights  .art-header {
+    height: auto;
+    padding-bottom: 100px;
+    background-size: cover !important;
+    background-attachment: scroll;
+  }
+  Remove bottom space out if articles doesn't have a background  .simple .art-header {
+    padding-bottom: 0;
+  }
+  .art-list {
+    padding-top: 0;
+  }
+  .abt {
+    padding: 40px 0;
+  }
+  .fourohfour {
+    padding: 80px 0 60px;
+  }
+}
+
+@media only screen and (max-width: 780px) {
+  .art-body-inner ul,
+  .art-body-inner ol {
+    margin-left: 20px;
+  }
+  .art-title {
+    letter-spacing: 0;
+  }
+  .art-subtitle,
+  .art-time {
+    font-size: 12px;
+  }
+  .nav {
+    padding-top: 25px;
+    height: 55px;
+  }
+  .art-list-item-title-and-time,
+  .art-list-item p {
+    float: none;
+    width: auto;
+    margin-left: 0;
+  }
+  .abt-body {
+    -moz-column-count: 1;
+    -webkit-column-count: 1;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .nav-primary li {
+    margin-left: 10px;
+  }
+  .nav #logo h1 {
+    font-size: 16px;
+    letter-spacing: -1px;
+  }
+  .nav li a {
+    font-size: 12px;
+  }
+  .art-header {
+    padding-bottom: 50px;
+  }
+  .art-header-inner {
+    margin-top: 190px !important;
+  }
+  .art-body-inner {
+    padding-top: 30px;
+  }
+  body {
+    font-size: 15px;
+    line-height: 24px;
+  }
+  p {
+    margin-bottom: 24px;
+  }
+  .footer {
+    padding: 10px 0 20px;
+  }
+  .back-to-top,
+  .footer-nav {
+    width: 50%;
+  }
+  .back-to-top {
+    text-align: left;
+  }
+  .footer-nav {
+    text-align: right;
+  }
+  .offsite-links {
+    float: left;
+    width: 100%;
+    text-align: left;
+  }
+  .offsite-links a {
+    font-size: 12px;
+  }
+  .art-list + .footer .footer-nav {
+    display: none;
+  }
+  .abt .abt-header {
+    font-size: 80px;
+  }
+  .abt .abt-subheader {
+    font-size: 18px;
+  }
+}
+ */
+
+
+/*  Misc
+================================================== */
+::selection {
+  background: #59deff;
+  color: #fff;
+}
+::-moz-selection {
+  background: #000;
+  color: #fff;
+}
+img.left {
+  float: left;
+  margin-right: 20px;
+}
+img.right {
+  float: right;
+  margin-left: 20px;
+}
+/* Clearfixing pile */
+.nav:before,
+.art-body-inner:before,
+.footer:before,
+.art-list:before {
+  content:"";
+  display:table;
+}
+.nav:after,
+.art-body-inner:after,
+.footer:after,
+.art-list:after {
+  clear:both;
+}
+.nav,
+.art-body-inner,
+.footer,
+.art-list {
+    zoom:1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+
+@-webkit-keyframes le-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-moz-keyframes le-fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.art-header-inner {
+  -webkit-animation: le-fade .5s 0 1 ease-out;
+  -moz-animation: le-fade .5s 0 1 ease-out;
+}
+
+.art-list,
+.nav,
+.abt,
+.art-body {
+  -webkit-animation: le-fade .5s 0s 1 ease-out;
+  -moz-animation: le-fade .5s 0s 1 ease-out;
+}
+
+.bg {
+	-webkit-filter: blur(3px) brightness(0.9);
+}
+
+
+
+
+
+=================================================

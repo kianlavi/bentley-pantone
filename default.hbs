@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="description" content="{{@blog.description}}">
+<meta name="author" content="{{@blog.title}}">
+
+<!-- Twitter Card -->
+{{#if post}}
+{{#post}}
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="{{! TODO: ADD TWITTER HANDLE HERE }}">
+<meta name="twitter:title" content="{{title}}">
+<meta name="twitter:description" content="{{excerpt}}">
+<meta name="twitter:creator" content="{{author.name}}">
+<meta name="twitter:image:src" content="{{! TODO: ADD GRAVATAR URL HERE }}">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{@blog.title}}">
+<meta property="og:description" content="{{excerpt}}">
+<meta property="og:image" content="{{! TODO: ADD GRAVATAR URL HERE }}">
+<meta property="og:site_name" content="{{@blog.title}}">
+{{/post}}
+{{else}}
+<meta name="twitter:card" content="summary">
+<meta name="twitter:site" content="{{! TODO: ADD TWITTER HANDLE HERE }}">
+<meta name="twitter:title" content="{{@blog.title}}">
+<meta name="twitter:description" content="{{@blog.description}}">
+<meta name="twitter:creator" content="{{@blog.title}}">
+<meta name="twitter:image:src" content="{{! TODO: ADD GRAVATAR URL HERE }}">
+
+<meta property="og:type" content="article">
+<meta property="og:title" content="{{@blog.title}}">
+<meta property="og:description" content="{{@blog.description}}">
+<meta property="og:image" content="{{! TODO: ADD GRAVATAR URL HERE }}">
+<meta property="og:site_name" content="{{@blog.title}}">
+{{/if}}
+
+<link rel="stylesheet" type="text/css" href="{{asset 'css/screen.css' }}" />
+<link rel="stylesheet" type="text/css" href="{{asset 'css/fluidbox.css' }}" />
+<link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900,200italic,300italic,400italic,600italic,700italic,900italic|PT+Serif:400,700,400italic,700italic|Source+Code+Pro|Source+Serif+Pro:400,600,700' rel='stylesheet' type='text/css'>
+
+<link rel="shortcut icon" type="image/x-icon" href="{{ asset 'img/favicon.ico' }}">
+
+<!--[if lt IE 9]>
+    <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+<![endif]-->
+
+{{#if post}}
+{{#post}}
+<title>{{title}} | {{@blog.title}}</title>
+{{/post}}
+{{else}}
+<title>{{@blog.title}}</title>
+{{/if}}
+
+{{ghost_head}}
+</head>
+
+<body class="{{body_class}}">
+<div class="wrapper">
+
+{{! Menu }}
+{{#if post}}
+<nav class="nav fixed">
+    <a id="logo" href="{{@blog.url}}"><h1 class="whitewash">{{@blog.title}}</h1></a>
+
+    <ul class="nav-primary">
+        {{! TODO: Add URLs here }}
+        <li><a class="whitewash" href="{{@blog.url}}/about-kian">about me</a></li>
+    </ul>
+</nav>
+
+{{else}}
+{{/if}}
+
+{{! Everything else gets inserted here }}
+{{{body}}}
+
+<!-- 
+{{#if post}}
+ -->
+<footer class="footer">
+    <div class="back-to-top"><a href="mailto:kianlavi+jobs@gmail.com?subject=Hi Kian!">Email Me</a></div>
+    <div class="footer-nav"><p>{{@blog.title}}</p></div>
+    <aside class="offsite-links">
+		<a class="twitter-link" href="http://www.twitter.com/kianlavi">@kianlavi</a>             
+    </aside>
+</footer>
+<!-- {{/if}} -->
+
+</div> {{! End of wrapper }}
+
+{{! Scripts }}
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script type="text/javascript" src="{{ asset 'js/fittext.js' }}"></script>
+<script type="text/javascript" src="{{ asset 'js/app.js' }}"></script>
+<script type="text/javascript" src="{{ asset 'js/respond.min.js' }}"></script>
+<script type="text/javascript" src="{{ asset 'js/jquery.fluidbox.min.js' }}"></script>
+<script type="text/javascript" src="{{ asset 'js/jquery.fluidbox.js' }}"></script>
+<script type="text/javascript">
+  var ga_ua = '{{! TODO: SET GOOGLE ANALYTICS ID }}';
+
+  (function(g,h,o,s,t,z){g.GoogleAnalyticsObject=s;g[s]||(g[s]=
+      function(){(g[s].q=g[s].q||[]).push(arguments)});g[s].s=+new Date;
+      t=h.createElement(o);z=h.getElementsByTagName(o)[0];
+      t.src='//www.google-analytics.com/analytics.js';
+      z.parentNode.insertBefore(t,z)}(window,document,'script','ga'));
+      ga('create',ga_ua);ga('send','pageview');
+</script>
+
+{{! Ghost outputs important scripts and data with this tag }}
+{{ghost_foot}}
+
+</body>
+</html>
