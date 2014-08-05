@@ -1,43 +1,39 @@
-# Rolls Royce
+# Bentley Pantone
 
-Rolls Royce is a minimal and responsive [Ghost](http://ghost.org) theme focusing on your content. With smooth and slick javascripts transitions, the experience is elegant and simple - just like the Ghost blogging platform. [See](http://roycehaynes.com) for yourself.
+Pantone is a rejiggering of what Royce Haynes made for [Ghost](http://ghost.org). As he put it, it's a "theme focusing on your content". I needed a new portfolio and I wanted to learn some JS, so I messed with what he had until it worked for me. Please forgive me if things don't make sense, I'm pretty green to this platform and how to build on it. 
 
-Expect updates - this theme is maturing along with Ghost. Feel free to [add suggested features](https://github.com/roycehaynes/rollsroyce/issues?state=open).
+Hopefully I'll update this often, as I'm planning on learning NodeJS and using this portfolio as my test bed. Feel free to [add a feature I'm not smart enough to implement](https://github.com/kianlavi/bentley-pantone/issues?state=open).
 
-## How to install
+And I know the name is stupid, but I'm using a theme called ['rollsroyce'](https://github.com/roycehaynes/rollsroyce) on a platform called Ghost. And I design things. So calling it Bentley Phantom was just too cheesy. 
 
-1. Navigate to your Ghost theme directory ghost/content/themes
+## How to install it
 
-2. Clone theme repo using below command ```git clone https://github.com/roycehaynes/rollsroyce "rollsroyce"```
+1. If you're hosted with Ghost, then just zip this baby up and upload it through their front-end. Otherwise, it's step 2 for you. 
 
-3. Restart ghost and log into your dashboard
+2. Clickety-clack your way to Ghost's theme directory (ghost/content/themes)
 
-4. On settings page, select rollsroyce as theme and save.
+3. Clone this repo there ``` git clone https://github.com/kianlavi/bentley-pantone "bentley-pantone"```
 
-5. To make custom changes, go to ```default.hbs``` and search for 'TODOs' to add things like twitter handle, google analytics ID, etc. This is a temporary fix to a problem in Ghost v0.4. 
+4. Restart your ghost installation.
 
-*Note:* Ping me (royce dot haynes at gmail dot.com) if you have any issues.
+5. Log into Ghost's configuration page and go to your Settings page. Select 'bentley-pantone' as the theme and save.
 
-## Releases
+*Note:* [Email me](kianlavi@gmail.com) or [its original creator](roycehaynes@gmail.com)  if you have any issues.
 
-See the [changelog](CHANGELOG.md) for release details.
+## Changes
+
+See my [changelog](CHANGELOG.md) for release details.
 
 | Version | Release Date |
 | :-----: | :----------: |
-| 0.2 | 2014-01-19 |
-| 0.1.1 | 2014-01-05 |
-| 0.1 | 2014-01-05 |
+| 0.0.1 | 2014-08-04 |
 
-## Contributing and Forking
+## The yada yada section
 
-*RollsRoyce* is open source and released under the MIT License, and contributions to the code base are welcome and encouraged. Find [more information about contributing here](CONTRIBUTING.md).
+*Bentley Pantone* is open source and released under the MIT License, and [yada yada yada, help me make it better](CONTRIBUTING.md).
 
 ## Thanks
 
-Thanks to [@JohnONolan](http://twitter.com/JohnONolan), [@ErisDS](http://twitter.com/ErisDS), and the Ghost team for creating this blog platform. 
+Thanks to [@roycehaynes](http://twitter.com/roycehaynes), [@mholland1337](http://twitter.com/mholland1337), and the Ghost team of course!
 
-Special shout out to [Dave Gamache](http://blog.davegamache.com/articles), the original designer.
-
-## Copyright & License
-
-Copyright (c) 2014 Royce Haynes - Released under The MIT License.
+Big shout out to the original designer of this theme, [Dave Gamache](http://blog.davegamache.com/articles). 
