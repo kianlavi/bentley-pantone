@@ -80,7 +80,7 @@ $(document).ready(function() {
   })
  
   // // Cover image of the header
-  var $postImage = $('.cover-image');
+  var $postImage = $('.cover');
   if ( $postImage.length ) {
   var postImageURL = $postImage.attr('src');
   $('.art-header').css('background-image','url(' + postImageURL + ')');
@@ -110,7 +110,7 @@ $(document).ready(function() {
 
 
   // Cover image of the header
-  var $postImage = $('.cover-image');
+  var $postImage = $('.cover');
   var $postImage = $('img[alt="cover"]');
   if ( $postImage.length ) {
   var postImageURL = $postImage.attr('src');
@@ -128,25 +128,42 @@ $(document).ready(function() {
  
 });
 
-//Function to wrap image in an a tag 
-  var aTagWrap = function(elem,elemClass){        
-        if($(elem).length > 0){
-            var imgs = $(elem);
-            if(imgs.length > 0){
-                imgs.each(function(){
-                    var $this = $(this);
-                    var imgLink = $this.attr('src');
-                    
-                    var html = '';
-                    html = "<a class='"+elemClass+"' href='"+ imgLink +"'></a>";
-                    
-                    $this.wrap(html);
-                });
- 
-            }
-        }
-    }
+	// Featured images
+
+$("#9").css("background-image","url(http://by.kianlavi.com/content/images/2014/Aug/LAVI0538.JPG)");
+$("#16").css("background-image","url(http://by.kianlavi.com/content/images/2014/Aug/team.jpg)");
+$("#12").css("background-image","url(http://by.kianlavi.com/content/images/2014/Aug/2.jpg)");
+$("#14").css("background-image","url(http://by.kianlavi.com/content/images/2014/Aug/tacos.jpg)");
+$("#10").css("background-image","url(http://by.kianlavi.com/content/images/2014/Aug/zodiac-copy.jpg)");
+$("#13").css("background-image","url(http://by.kianlavi.com/content/images/2014/Aug/cottage.JPG)");
+$("#15").css("background-image","url(http://kianlavi.com/wp-content/uploads/MG_7831.jpg)");
+
+	
+
+	
+	
+	
+// 
+// //Function to wrap image in an a tag 
+//   var aTagWrap = function(elem,elemClass){        
+//         if($(elem).length > 0){
+//             var imgs = $(elem);
+//             if(imgs.length > 0){
+//                 imgs.each(function(){
+//                     var $this = $(this);
+//                     var imgLink = $this.attr('src');
+//                     
+//                     var html = '';
+//                     html = "<a class='"+elemClass+"' href='"+ imgLink +"'></a>";
+//                     
+//                     $this.wrap(html);
+//                 });
+//  
+//             }
+//         }
+//     }
+//     
+//     //Call function example
+//     aTagWrap('.post-page-post .post-text img','fluid-popup');
+//     $('.fluid-popup').fluidbox();
     
-    //Call function example
-    aTagWrap('.post-page-post .post-text img','fluid-popup');
-    $('.fluid-popup').fluidbox();

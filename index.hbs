@@ -5,21 +5,24 @@
 		<logo><p id="logo">k.</p></logo>
 		<a href="#"><h2 id="sideTitle">Kian Lavi</h2></a>
 		<p id="sideCaption">I love working with technology that makes the quotidien interesting. Wherever I go, I photograph people.</p>
-		<p class="sideResume"><a href="#">Resume</a></p>
-		<p class="sideLinks"><a class="sideLinksA" href="#">About Me</a></p>
-		<p class="sideLinks"><a class="sideLinksA" href="#">Email Me</a></p>
-		<p class="sideLinks"><a class="sideLinksA" href="#">Photography</a></p>				
+		<p class="sideResume"><a href="http://www.kianlavi.com/resume.pdf">Resume</a></p>
+		<p class="sideLinks"><a class="sideLinksA" href="{{ @blog.url }}/about">About Me</a></p>
+		<p class="sideLinks"><a class="sideLinksA" href="mailto:kianlavi+jobs@gmail.com?subject=Hi Kian!">Email Me</a></p>
+		<p class="sideLinks"><a class="sideLinksA" href="http://www.kianlavi.com">Photography</a></p>				
 	</div>
     <div class="posts">
         <nav class="art-list">
+        <h1 style="text-transform: none; text-align:center;">Projects I've worked on</h1>
           <ul class="art-list-body">
             {{#foreach posts }}
             <li class="art-list-item" onclick="location.href='{{url}}';" style="cursor: pointer;">
-                <a href="{{url}}"><div class="art-list-item-title-and-time"></a>
-                    <h2 class="art-list-title"><a id="hello" href="{{ @blog.url }}{{ url }}">{{ title }}</a></h2>
-                    <div class="art-list-time">{{date published_at format="MMMM Do, YYYY"}}</div>
-                </div>
-                <p>{{excerpt characters="140"}}</p>
+            	<featured id="{{id}}">
+					<a href="{{url}}"><div class="art-list-item-title-and-time"></a>
+						<h2 class="art-list-title"><a id="hello" href="{{ @blog.url }}{{ url }}">{{ title }}</a></h2>
+						<div class="art-list-time">{{date published_at format="MMMM Do, YYYY"}}</div>
+					</div>
+					<p>{{excerpt characters="140"}}...</p>
+				</featured>
             </li>
             {{/foreach}}
           </ul>
