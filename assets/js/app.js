@@ -128,20 +128,14 @@ $(document).ready(function() {
  
 });
 
-	// Featured images
-
-$("#9").css("background-image","url(http://by.kianlavi.com/content/images/2014/Aug/LAVI0538.JPG)");
-$("#16").css("background-image","url(http://by.kianlavi.com/content/images/2014/Aug/team.jpg)");
-$("#12").css("background-image","url(http://by.kianlavi.com/content/images/2014/Aug/2.jpg)");
-$("#14").css("background-image","url(http://by.kianlavi.com/content/images/2014/Aug/tacos.jpg)");
-$("#10").css("background-image","url(http://by.kianlavi.com/content/images/2014/Aug/zodiac-copy.jpg)");
-$("#13").css("background-image","url(http://by.kianlavi.com/content/images/2014/Aug/cottage.JPG)");
-$("#15").css("background-image","url(http://kianlavi.com/wp-content/uploads/MG_7831.jpg)");
-
-	
-
-	
-	
+	// Hacking together featured images for the homepage	
+$("#9").css("background-image","url(http://by.kianlavi.com/content/images/2014/Aug/LAVI0538.JPG)");	// Sony
+$("#16").css("background-image","url(http://by.kianlavi.com/content/images/2014/Aug/team.jpg)"); 			// KA Lite
+$("#12").css("background-image","url(http://by.kianlavi.com/content/images/2014/Aug/2.jpg)");				 	//  Oscar's
+$("#14").css("background-image","url(http://by.kianlavi.com/content/images/2014/Aug/tacos.jpg)");				// Tacos
+$("#10").css("background-image","url(http://by.kianlavi.com/content/images/2014/Aug/zodiac-copy.jpg)");		// Zodiac
+$("#13").css("background-image","url(http://by.kianlavi.com/content/images/2014/Aug/cottage.JPG)");		// Cottage
+$("#15").css("background-image","url(http://by.kianlavi.com/content/images/2014/Aug/featured.jpg)");	// Photography	
 	
 // 
 // //Function to wrap image in an a tag 

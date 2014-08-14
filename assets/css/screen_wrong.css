@@ -500,45 +500,14 @@ div.cover > img {
           box-shadow: none;
 }
 
-
-div.half { 
-	display: block; 
-	min-height: 4em; 
-	width: 100%; 
-	margin-bottom: 2em; 
-	font: 0.75em/1.5em PT Serif;
-	font-style: italic;
-	}
-div.half > p { 
-	width: 55%; 
-	display: inline-block; 
-	float: left; 
-	font: 0.75 em/1.5em "PT Serif"; 
-	font-style: italic;
-	margin: 0;
-	}
-div.half > p:first-child { width: 45%; }
-
-/* Links to finished projects */
-.actionLink {
-	background: #59deff; 
-	color: white!important; 
-	text-decoration: none; 
-	padding: 1em; 
-	text-align: center; 
-	font-family: Gotham Medium; 
-	text-transform:uppercase;
-}
-
-/* Image captions */
-figure { margin-bottom: 1em; }
-figcaption::before { 
+figcaption::before {
   margin-left: 75%; 
   border: 1px solid #f2f2f2; 
   display: block; 
   content: ""; 
   margin-bottom: 10px;
 }
+
 figcaption {
 	position: absolute;
 	left: -175px;
@@ -551,8 +520,9 @@ figcaption {
 	margin-top: 1em;
 }
 
-
-
+figure {
+	margin-bottom: 1em;
+}
 
 
 
@@ -566,8 +536,6 @@ figcaption {
   overflow: hidden;
 }
 
-.art-list > h1 { letter-spacing: -2px; }
-
 .art-list-item:first-child {
 /*   border-top: 10px solid rgb(37, 37, 37); */
 
@@ -578,7 +546,6 @@ figcaption {
   list-style: none;
   overflow: hidden;
   border-bottom: 3px solid #fff; 
-  background: rgb(37,37,37);
 
 }
 .art-list-item:hover {
@@ -606,8 +573,8 @@ featured:hover {
 }
 
 .art-list-title {
-  font-size: 3em;
-  line-height: 1em;
+  font-size: 48px;
+  line-height: 26px;
   font-weight: 700;
   font-family: Gotham;
   padding-top: 1em;
@@ -811,6 +778,7 @@ padding: 0;
 /*  Responsive
 ================================================== */
 /* Smartphones (portrait and landscape) ----------- */
+
 /* Smartphones (portrait and landscape) ----------- */
 @media only screen (orientation: portrait), (max-width:1023px) {
 	
@@ -868,7 +836,7 @@ and (max-device-width : 480px) {
     padding: 1em 0;
   }
   
-/*   div.posts { margin-left: -2.5em; } */
+  div.posts { margin-left: -2.5em; }
   .art-list { width: 86vw!important; }
   .art-list-item { padding: 0; }
   .art-list-item > p { display: none; } 
@@ -883,7 +851,6 @@ and (max-device-width : 480px) {
 
 @media only screen and (max-width: 1080px) {
   /* Set all of the 980 containers to flexible width */
-  
   .nav,
   .art-header-inner,
   .footer,
@@ -919,7 +886,6 @@ and (max-device-width : 480px) {
     margin-left: 0em;
   }
   
-  .sideResume { padding-bottom: 0!important; }
   .sideResume > a {
     display: block;
     padding: 1em 0;
@@ -933,15 +899,12 @@ and (max-device-width : 480px) {
     display: block;
     padding: 1em 0;
   }
-  .sideLinks > a:hover { padding-left: 0; }
   
-  div#home { padding: 5vw; }
-  
-/*   div.posts { margin-left: -2.5em; } */
+  div.posts { margin-left: -2.5em; }
   .art-list { width: 86vw!important; }
-  .art-list-item { padding: 0; margin-bottom: 1em; }
+  .art-list-item { padding: 0; }
   .art-list-item > p { display: none; } 
-  .art-list-title { line-height: 1em; padding: 1em 0; font-size: 2em; }  
+  .art-list-title { line-height: 1em; padding: 1em 0; }  
   
   .art-header {
     height: auto;
@@ -949,11 +912,6 @@ and (max-device-width : 480px) {
     background-size: cover !important;
     background-attachment: scroll;
   }
-  
-  featured:hover { padding: 40px 0!important; }
-  
-  .actionLink {	padding: .2em; }
-
   
 }
 
@@ -1023,10 +981,7 @@ and (max-device-width : 480px) {
   .abt-body {
     -moz-column-count: 1;
     -webkit-column-count: 1;
-  } 
-  
-  .art-list-item-title-and-time, .art-list-item p { margin: 0 1em!important; } 
-
+  }
 }
 
 @media only screen and (max-width: 500px) {
