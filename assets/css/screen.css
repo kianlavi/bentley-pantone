@@ -28,6 +28,8 @@ body {
   font: 17px/28px PT Serif, "Georgia", serif;
   color: #333;
   background: #e4e4e4;
+  margin: 0;
+  border-top: 5px solid #59deff;
 }
 hr { 
   width: 85%;
@@ -41,7 +43,7 @@ hr {
 /* Typography
 ================================================== */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "gotham" "proxima-nova", "helvetica neue", "helvetica", sans-serif;
+  font-family: "Gotham", "Helvetica Neue", "Helvetica", sans-serif;
   font-weight: normal;
   text-transform: uppercase;
   font-weight: 700;
@@ -156,7 +158,7 @@ p#logo {float:none!important;}
 #sideTitle {
   font-size: 4em;
   line-height: 0.75em;
-  font-family: Source Sans Pro;
+  font-family: "Source Sans Pro", "Helvetica Neue";
   color: rgb(37, 37, 37); 
   text-rendering: optimizeLegibility; 
   font-weight: 700;
@@ -189,9 +191,8 @@ p.sideResume > a {
           transition: all 150ms ease-in-out;
   }
 p.sideResume > a:hover {
-  color: #fff;
-  background: #59deff; 
-  padding-left: 1em;
+  border-bottom: 1px solid #59deff;
+  box-shadow: inset 0 -4px 0 #59deff;
 }
 .sideLinks {
   color: rgb(37, 37, 37)!important; 
@@ -199,9 +200,8 @@ p.sideResume > a:hover {
   font: 1em/1.5em Source Sans Pro;
 }
 .sideLinks > a:hover {
-  color: #fff!important; 
-  background: #59deff; 
-  padding-left: 1em; 
+  border-bottom: 1px solid #59deff;
+  box-shadow: inset 0 -4px 0 #59deff;
 }
 .sideLinks > a {
   color: rgba(37,37,37,0.5)!important; 
@@ -221,9 +221,10 @@ p.sideResume > a:hover {
 ================================================== */
 /* White container that is the "page" */
 .wrapper {
-  max-width: 1500px;
+/*   max-width: 1500px; */
   margin: 0 auto;
   background: #fff;
+  border-top: 5px solid white;
 }
 
 /* Containers to keep content to a set width */
@@ -251,7 +252,6 @@ p.sideResume > a:hover {
   position: absolute;
   top: 0;
   left: 50%;
-  height: 70px;
   padding-top: 40px;
   margin-left: -490px; /* Half width of nav */
   border-bottom: 1px solid #333;
@@ -274,19 +274,18 @@ p.sideResume > a:hover {
 #logo h1,
 .nav-primary li,
 .nav-primary li a {
-  font-family: "Gotham Medium" "proxima-nova", "helvetica neue", "helvetica", sans-serif;
+  font-family: "Helvetica neue", "Helvetica", sans-serif;
   font-size: 1em;
   line-height: 30px;
   color: #000;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  font-weight: 500;
 }
 
 #logo h1 {
   width: 100%;
   height: 30px;
   margin-left: 0px;
-  letter-spacing: 1px; 
 }
 ul > li > a.whitewash:hover,
 #logo > h1:hover
@@ -358,6 +357,7 @@ div.cover > img {
   /* Background image is defined in the post */
   background-position: top center;
   background-attachment: fixed;
+  background-size: cover;
   overflow: hidden;
 }
 /* Contains the time, title and subtitle for an article */
@@ -377,6 +377,7 @@ div.cover > img {
   font-size: 14px;
   line-height: 1.8;
   letter-spacing: 4px;
+  display: none;
 }
 .art-title {
   font-size: 100px;
@@ -386,6 +387,7 @@ div.cover > img {
 }
 .art-subtitle {
   margin-top: 4px;
+  font-family: "Source Sans Pro";
   font-size: 14px;
   line-height: 1.3;
   letter-spacing: 4px;
@@ -411,14 +413,15 @@ div.cover > img {
           box-shadow: 0 -3px 3px rgba(0,0,0,.2);
 }
 .art-body-inner {
-  max-width: 640px;
+  max-width: 960px;
   padding: 80px 0 50px;
 }
 .art-body-inner h1, 
 .art-body-inner h2, 
 .art-body-inner h3 { 
-	text-transform: none; 
-	padding-bottom: 0.3em
+	font-family: "Source Sans Pro", "Helvetica Neue";
+  text-transform: none; 
+	padding-bottom: 0.3em;
 	}
 
 .art-body-inner ul,
@@ -478,7 +481,6 @@ div.cover > img {
 }
 .art-body-inner img {
   max-width: 100%;
-  max-height: 600px;
   margin: 0;
 }
 .art-body-inner img.center {
@@ -491,6 +493,20 @@ div.cover > img {
   color: #999;
   margin-top: 50px;
 }
+
+.art-body-inner h1, 
+.art-body-inner h2, 
+.art-body-inner h3, 
+.art-body-inner p, 
+.art-body-inner ul, 
+.art-body-inner ol, 
+.art-body-inner blockquote, 
+.art-body-inner div.half  { 
+  max-width: 640px;
+  margin-left: auto!important;
+  margin-right: auto!important; 
+}
+.art-body-inner blockquote > p { margin-left: 2.75em!important; }
 
 /* For simple, white background posts */
 .simple .art-body {
@@ -506,18 +522,17 @@ div.half {
 	min-height: 4em; 
 	width: 100%; 
 	margin-bottom: 2em; 
-	font: 0.75em/1.5em PT Serif;
+	font: 0.75em/1.5em "Source Serif Pro", "PT Serif";
 	font-style: italic;
 	}
 div.half > p { 
-	width: 55%; 
+	width: 50%; 
 	display: inline-block; 
 	float: left; 
-	font: 0.75 em/1.5em "PT Serif"; 
+	font: 0.75 em/1.5em "Source Serif Pro", "PT Serif"; 
 	font-style: italic;
 	margin: 0;
 	}
-div.half > p:first-child { width: 45%; }
 
 /* Links to finished projects */
 .actionLink {
@@ -526,12 +541,13 @@ div.half > p:first-child { width: 45%; }
 	text-decoration: none; 
 	padding: 1em; 
 	text-align: center; 
-	font-family: Gotham Medium; 
+	font-family: "Gotham Medium", "Helvetica Neue"; 
 	text-transform:uppercase;
 }
 
 /* Image captions */
 figure { margin-bottom: 1em; }
+/* 
 figcaption::before { 
   margin-left: 75%; 
   border: 1px solid #f2f2f2; 
@@ -539,17 +555,22 @@ figcaption::before {
   content: ""; 
   margin-bottom: 10px;
 }
+ */
 figcaption {
-	position: absolute;
-	left: -175px;
-	width: 150px;
-	color: rgba(37,37,37,0.5);
-	text-align: right;
-	font-size: 0.75em;
-	font-style: italic;
-	line-height: 1.2em;
-	margin-top: 1em;
-}
+  /* position: absolute; */
+  /* left: -175px; */
+  /* width: 150px; */
+  /* font-style: italic; */
+  color: rgba(37,37,37,0.5);
+  text-align: center;
+  font-size: 0.75em;
+  background-color: black;
+  color: white;
+  line-height: 1.5em;
+  margin-top: -0.6em;
+  padding: 0.4em 1em;
+  font-family: "Source Sans Pro", "PT Serif";
+  }
 
 
 
@@ -566,7 +587,7 @@ figcaption {
   overflow: hidden;
 }
 
-.art-list > h1 { letter-spacing: -2px; }
+.art-list > h1 { letter-spacing: -1px; font-family: "Source Sans Pro", "Helvetica Neue"; padding-bottom: 0.5em; }
 
 .art-list-item:first-child {
 /*   border-top: 10px solid rgb(37, 37, 37); */
@@ -579,10 +600,21 @@ figcaption {
   overflow: hidden;
   border-bottom: 3px solid #fff; 
   background: rgb(37,37,37);
+  min-height: 300px; 
+  display: flex;
+  display: -webkit-flex;
+  display: -moz-flex;
+  background-size: cover;
+  -ms-background-position-x: 50%;
+  background-position-x: 50%;
+  transition: all 0.5s ease-out;
+  -webkit-transition: all 0.5s ease-out;
 
 }
 .art-list-item:hover {
 /*  background: rgb(37, 37, 37);*/
+  padding: 72px; 
+
   }
 .art-list-item:last-child {
 /* 
@@ -600,6 +632,10 @@ featured {
 		 -o-transition: all .5s ease-in-out;
 			transition: all .5s ease-in-out;
 	background-size: cover;
+	background-position-x: 50%;
+  margin: 0 auto; 
+  align-self: center;
+  -webkit-align-self: center;
 			}
 featured:hover {
 	padding: 80px 0!important; 
@@ -609,8 +645,9 @@ featured:hover {
   font-size: 3em;
   line-height: 1em;
   font-weight: 700;
-  font-family: Gotham;
+  font-family: "Gotham", "Helvetica Neue";
   padding-top: 1em;
+  margin: 0;
 }
 
 .art-list-item-title-and-time {
@@ -634,7 +671,7 @@ featured:hover {
   color: #fff;
 }
 .art-list-title a:hover {
-  color: #b20f1f;
+  color: #59deff;
 }
 .art-list-item p {
   /* 
@@ -646,10 +683,10 @@ width: 65%;
   margin-bottom: 0;
   font-size: 18px;
   line-height: 24px;
-  font-family: source sans pro;
+  font-family: "Source Sans Pro", "Helvetica Neue";
   color: #fff;
   font-weight: 100;  
-  padding-top: 1em;
+  padding: 0.5em 0 1em 0; 
   margin: 0 auto; 
   width: 75%;
 }
@@ -664,10 +701,11 @@ width: 65%;
 }
 .footer,
 .footer a {
-  font-family: "Gotham Medium", "Helvetica Neue", "helvetica neue", "helvetica", sans-serif;
-  font-size: 13px;
+  font-family: "Helvetica Neue", "Helvetica", sans-serif;
+  font-size: 1em;
   text-transform: uppercase;
   color: #777;
+  font-weight: 500;
 }
 .footer a:hover {
 	color: #59deff!important;
@@ -782,7 +820,7 @@ background: rgb(37,37,37);
 color: #fff;
 font-size: 90%;
 padding: 0 1em;
-font-family: Courier New;
+font-family: "Monaco", "Courier New";
 }
 
 pre {
@@ -795,7 +833,7 @@ word-break: break-all;
 word-wrap: break-word;
 background: rgb(37,37,37);
 color: #fff
-font-family: Courier New;
+font-family: "Monaco", "Courier New";
 }
 
 pre code, tt {
@@ -872,7 +910,7 @@ and (max-device-width : 480px) {
   .art-list { width: 86vw!important; }
   .art-list-item { padding: 0; }
   .art-list-item > p { display: none; } 
-  .art-list-title { line-height: 1em; padding: 1em 0; }  
+  .art-list-title { line-height: 1em; padding: 1em 0;}  
   
   hr {width: 100%;}
   
@@ -924,6 +962,13 @@ and (max-device-width : 480px) {
     display: block;
     padding: 1em 0;
   }
+  p.sideResume > a:hover {
+  padding-left: 0em;
+}
+
+#sideCaption {
+  font: 1.25em/1.25em Source Sans Pro;
+}
   
   .sideLinks {
     padding: 0; 
@@ -939,9 +984,13 @@ and (max-device-width : 480px) {
   
 /*   div.posts { margin-left: -2.5em; } */
   .art-list { width: 86vw!important; }
-  .art-list-item { padding: 0; margin-bottom: 1em; }
+  .art-list-item { padding: 0; margin-bottom: 1em; min-height: 450px;}
   .art-list-item > p { display: none; } 
-  .art-list-title { line-height: 1em; padding: 1em 0; font-size: 2em; }  
+  .art-list-title { line-height: 1em; padding: 1em 0 0 0; font-size: 2em; }  
+  featured > p { padding: 0.5em 0 1em 0!important; }
+
+  ul.art-list-body { padding: 0; }
+
   
   .art-header {
     height: auto;
@@ -1035,7 +1084,6 @@ and (max-device-width : 480px) {
   }
   .nav #logo h1 {
     font-size: 12px;
-    letter-spacing: -1px;
   }
   .nav li a {
     font-size: 12px;
@@ -1059,6 +1107,7 @@ and (max-device-width : 480px) {
   .footer {
     padding: 10px 0 20px;
   }
+  .footer a { font-size: 12px; }
   .back-to-top,
   .footer-nav {
     width: 50%;

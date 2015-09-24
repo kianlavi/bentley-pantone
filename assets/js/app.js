@@ -86,8 +86,8 @@ $(document).ready(function() {
   $('.art-header').css('background-image','url(' + postImageURL + ')');
   $('.art-title').css('color', 'white');
   $('.whitewash').css('color', 'white');
-  $('.nav').css('border-bottom-color', 'rgba(255,255,255,0.3');
   $('time').css('color', 'rgba(255,255,255,0.75)');
+  $('.nav').css('border-bottom-color', 'white');
     }
   $postImage.remove();
  
@@ -115,10 +115,10 @@ $(document).ready(function() {
   if ( $postImage.length ) {
   var postImageURL = $postImage.attr('src');
   $('.art-header').css('background-image','url(' + postImageURL + ')');
+  $('.nav').css('border-bottom', '1px solid white');
   $('.art-title').css('color', 'white');
   $('.art-subtitle').css('color', 'white');
   $('.whitewash').css('color', 'white');
-  $('.nav').css('border-bottom-color', 'rgba(255,255,255,0.3');
   $('time').css('color', 'rgba(255,255,255,0.75)');
   
   }
@@ -129,13 +129,15 @@ $(document).ready(function() {
 });
 
 	// Hacking together featured images for the homepage	
-$("#9").css("background-image","url(http://by.kianlavi.com/content/images/2014/Aug/LAVI0538.JPG)");	// Sony
-$("#16").css("background-image","url(http://by.kianlavi.com/content/images/2014/Aug/team.jpg)"); 			// KA Lite
-$("#12").css("background-image","url(http://by.kianlavi.com/content/images/2014/Aug/2.jpg)");				 	//  Oscar's
-$("#14").css("background-image","url(http://by.kianlavi.com/content/images/2014/Aug/tacos.jpg)");				// Tacos
-$("#10").css("background-image","url(http://by.kianlavi.com/content/images/2014/Aug/zodiac-copy.jpg)");		// Zodiac
-$("#13").css("background-image","url(http://by.kianlavi.com/content/images/2014/Aug/cottage.JPG)");		// Cottage
-$("#15").css("background-image","url(http://by.kianlavi.com/content/images/2014/Aug/featured.jpg)");	// Photography	
+$("#9").css("background-position-y","0%");	// Sony
+$("#16").css("background-position-y","10%"); 			// KA Lite
+$("#12").css("background-position-y","30%");				 	//  Oscar's
+$("#14").css("background-position-y","10%");				// Tacos
+$("#10").css("background-position-y","20%");		// Zodiac
+$("#13").css("background-position-y","0%");		// Cottage
+$("#15").css("background-position-y","0%");	// Photography	
+$("#5").css("background-position-y","40%");	// About	
+
 	
 // 
 // //Function to wrap image in an a tag 
