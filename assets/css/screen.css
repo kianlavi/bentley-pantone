@@ -1,4 +1,52 @@
-@import url(http://fonts.googleapis.com/css?family=Open+Sans);
+@font-face {
+  font-family: 'SF UID';
+  src: local('SF UI Display'); 
+  src: url(SF-UI-Display-Regular.otf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SF CD';
+  src: local('SF Compact Display'); 
+  src: url(SF-Compact-Display-Regular.otf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SF UIT';
+  src: local('SF UI Text'); 
+  src: url(SF-UI-Text-Regular.otf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SF UIT';
+  src: local('SF UI Text'); 
+  src: url(SF-UI-Text-Light.otf);
+  font-weight: 100;
+}
+
+@font-face {
+  font-family: 'SF UIT';
+  src: local('SF UI Text'); 
+  src: url(SF-UI-Text-Bold.otf);
+  font-weight: bold;
+}
+
+@font-face {
+  font-family: 'SF CT';
+  src: local('SF Compact Text'); 
+  src: url(SF-Compact-Text-Regular.otf);
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'SF CT';
+  src: local('SF Compact Text'); 
+  src: url(SF-Compact-Text-Bold.otf);
+  font-weight: bold;
+}
+
 
 /* Reset & Basics (Inspired by E. Meyers and Kian Lavi)
 ================================================== */
@@ -23,13 +71,21 @@ html, body {
 .wrapper {
   min-height: 100%;
 }
+#border_top, #border_bottom {
+  border-top: 5px solid #4d80da;
+  position: fixed;
+  width: 100%;
+  z-index: 1000000000;
+}
+#border_bottom { bottom: 0;}
 body {
   overflow-x: hidden;
-  font: 17px/28px PT Serif, "Georgia", serif;
   color: #333;
   background: #e4e4e4;
   margin: 0;
-  border-top: 5px solid #59deff;
+  font-family: "SF UIT", "Helvetica Neue";
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 hr { 
   width: 85%;
@@ -43,12 +99,11 @@ hr {
 /* Typography
 ================================================== */
 h1, h2, h3, h4, h5, h6 {
-  font-family: "Gotham", "Helvetica Neue", "Helvetica", sans-serif;
+  font-family: "SF UID", "Helvetica Neue", "Helvetica", sans-serif;
   font-weight: normal;
   text-transform: uppercase;
-  font-weight: 700;
-  color: #000;
   text-rendering: optimizeLegibility;
+  color: #000;
 }
 
 h1 { font-size: 2em; padding-bottom: 0.5em;}
@@ -67,19 +122,6 @@ em {
 }
 sup {
   line-height: 0;
-}
-
-@font-face {
-  font-family: "Gotham";
-  src: url(Gotham-Bold.ttf) format("truetype");
-}
-@font-face {
-  font-family: "Gotham Black";
-  src: url(Gotham-Black.ttf) format("truetype");
-}
-@font-face {
-  font-family: "Gotham Medium";
-  src: url(Gotham-Medium.ttf) format("truetype");
 }
 
 /* Teaser
@@ -110,17 +152,17 @@ a:hover {
 }
 
 div.art-body-inner a {
+  border-bottom: 1px solid #4d80da;
+  box-shadow: inset 0 -4px 0 #4d80da;
   color: rgb(37,37,37);
+  padding: 1px 0;
   text-decoration: none;
-  border-bottom: 1px solid #59deff;
-  box-shadow: inset 0 -4px 0 #59deff;
 }
 
 div.art-body-inner a:hover {
-  color: rgb(37,37,37);
-  text-decoration: none;
-  border-bottom: 1px solid #0084B4;
-  box-shadow: inset 0 -4px 0 #0084B4;
+  color: #fff;
+  background: #4d80da;
+  padding: 5px;
 }
 
 /*  Sidebar
@@ -135,40 +177,36 @@ div.art-body-inner a:hover {
 }
 
 logo {
-	background: #59deff;
-	color: white;
-	display: block;
-	font-weight: 600!important;
-	width: 70%;
+	background: #4d80da;
+	color: #fff;
+	width: 90%;
 	text-align: center;
 	float: right;
-	border-bottom: 0.em solid #47BBD8;
-	margin-bottom: 16px;
+	margin-bottom: 1rem;
 	padding-top: 9em;
 	margin-top: -6em;
-	font: 48px/1em Source Sans Pro;
+	font-family: "SF UID", "Helvetica Neue";
+	font-size: 3rem;
+	line-height: 2rem;
 }
 logo:hover{}
 
-p#logo {float:none!important;}
+p#logo {float: none!important;}
 
 #sideLogo {
   width: 95px; 
   }
 #sideTitle {
-  font-size: 4em;
-  line-height: 0.75em;
-  font-family: "Source Sans Pro", "Helvetica Neue";
-  color: rgb(37, 37, 37); 
-  text-rendering: optimizeLegibility; 
-  font-weight: 700;
-  
+  font-size: 3.3rem;
+  line-height: 3.5rem;
+  margin-bottom: 0rem;
+  text-transform: none;
 }
 #sideCaption {
-  font: 1em/1.25em Source Sans Pro;
-  font-weight: 100;
-  color: rgba(37, 37, 37, 0.5); 
-  padding-top: 1em;
+  color: #777;
+  font-family: "SF CT", "Helvetica Neue";
+  font-weight: 300;
+  font-size: 1.04rem;
 }
 
 div#sidebar > p {
@@ -176,33 +214,34 @@ div#sidebar > p {
 }
 
 .sideResume {
-  padding: 1em 0!important;
-  color: rgb(37, 37, 37)!important; 
-  font-weight: 100;
-  font: 1.25em/1em Source Sans Pro;
+  padding: 1rem 0;
+  color: rgb(37, 37, 37);
+  font-family: "SF CT", "Helvetica Neue";
+  font-size: 1rem;
+  font-weight: bold;
+  line-height: 1.2rem;
 }
 p.sideResume > a {
   color: rgb(37, 37, 37);
-  font-weight: 700;   
   -webkit-transition: all 150ms ease-in-out;
-     -moz-transition: all 150ms ease-in-out;
-      -ms-transition: all 150ms ease-in-out; 
-       -o-transition: all 150ms ease-in-out;
-          transition: all 150ms ease-in-out;
+  -moz-transition: all 150ms ease-in-out;
+  -ms-transition: all 150ms ease-in-out;
+  -o-transition: all 150ms ease-in-out;
+  transition: all 150ms ease-in-out;
   }
 p.sideResume > a:hover {
-  border-bottom: 1px solid #59deff;
-  box-shadow: inset 0 -4px 0 #59deff;
+  background: #4d80da;
+  color: #fff;
+  font-weight: normal;
+  padding: 5px;
 }
 .sideLinks {
-  color: rgb(37, 37, 37)!important; 
-  font-weight: 100!important;
-  font: 1em/1.5em Source Sans Pro;
+  font-family: "SF CT", "Helvetica Neue";
+  font-size: 1rem;
+  line-height: 1.25rem;
 }
 .sideLinks > a:hover {
-  border-bottom: 1px solid #59deff;
-  box-shadow: inset 0 -4px 0 #59deff;
-}
+background: #4d80da;     color: #fff!important;     font-weight: normal;     padding: 2px;}
 .sideLinks > a {
   color: rgba(37,37,37,0.5)!important; 
   -webkit-transition: all 150ms ease-in-out;
@@ -274,23 +313,20 @@ p.sideResume > a:hover {
 #logo h1,
 .nav-primary li,
 .nav-primary li a {
-  font-family: "Helvetica neue", "Helvetica", sans-serif;
-  font-size: 1em;
-  line-height: 30px;
+  line-height: 2rem;
   color: #000;
   text-transform: uppercase;
-  font-weight: 500;
+  font-family: "SF CD", "Helvetica Neue";
+  font-size: 1.25rem;
+  font-weight: normal;
 }
 
 #logo h1 {
-  width: 100%;
-  height: 30px;
-  margin-left: 0px;
 }
 ul > li > a.whitewash:hover,
 #logo > h1:hover
 {
-	color: #59deff!important;
+	color: #4d80da!important;
     -webkit-transition: all .2s ease-in-out;
        -moz-transition: all .2s ease-in-out;
         -ms-transition: all .2s ease-in-out; 
@@ -309,7 +345,7 @@ menu {
   padding: 2em 0 0em 0;
   height: 5vh;
   top: 0;
-  background: #59deff;
+  background: #4d80da;
   z-index: 1000;
   display: none;
 }
@@ -353,13 +389,25 @@ div.cover > img {
 }
 /* Header */
 .art-header {
-  height: 900px;
-  /* Background image is defined in the post */
+  height: 100vh;/* Background image is defined in the post */
   background-position: top center;
   background-attachment: fixed;
   background-size: cover;
-  overflow: hidden;
+  overflow: hidden;/* Chrome, Safari, Opera */
 }
+
+/* Chrome, Safari, Opera */ 
+@-webkit-keyframes growBg {
+    0%   { -webkit-background-size: 100%; background-size: 100%; }
+    100% { -webkit-background-size: 110%; background-size: 110%; }
+}
+
+/* Standard syntax */
+@keyframes growBg {
+    0%   { -webkit-background-size: 100%; background-size: 100%; }
+    100% { -webkit-background-size: 110%; background-size: 110%; }
+}
+
 /* Contains the time, title and subtitle for an article */
 .art-header-inner {
   position: fixed;
@@ -380,17 +428,17 @@ div.cover > img {
   display: none;
 }
 .art-title {
-  font-size: 100px;
-  line-height: .9;
+  font-size: 6rem;
+  font-weight: 400;
+  line-height: 1;
   letter-spacing: -2px;
   width: 100%;
 }
 .art-subtitle {
-  margin-top: 4px;
-  font-family: "Source Sans Pro";
-  font-size: 14px;
-  line-height: 1.3;
+  font-family: "SF CD", "Helvetica Neue";
+  font-size: 1rem;
   letter-spacing: 4px;
+  line-height: 1.25rem;
 }
 
 /* If small header, make few adjustments */
@@ -414,7 +462,7 @@ div.cover > img {
 }
 .art-body-inner {
   max-width: 960px;
-  padding: 80px 0 50px;
+  padding: 0 0 50px;
 }
 .art-body-inner h1, 
 .art-body-inner h2, 
@@ -480,7 +528,7 @@ div.cover > img {
   font-weight: bold;
 }
 .art-body-inner img {
-  max-width: 100%;
+  max-width: 99%;
   margin: 0;
 }
 .art-body-inner img.center {
@@ -501,10 +549,10 @@ div.cover > img {
 .art-body-inner ul, 
 .art-body-inner ol, 
 .art-body-inner blockquote, 
-.art-body-inner div.half  { 
+.art-body-inner div.half  {
   max-width: 640px;
   margin-left: auto!important;
-  margin-right: auto!important; 
+  margin-right: auto!important;
 }
 .art-body-inner blockquote > p { margin-left: 2.75em!important; }
 
@@ -517,26 +565,26 @@ div.cover > img {
 }
 
 
-div.half { 
-	display: block; 
-	min-height: 4em; 
-	width: 100%; 
-	margin-bottom: 2em; 
-	font: 0.75em/1.5em "Source Serif Pro", "PT Serif";
+div.half {
+	display: block;
+	min-height: 4em;
+	width: 100%;
+	margin-bottom: 2em;
+	font-family: "SF CT", "Helvetica Neue";
+	font-size: 0.8rem;
+	line-height: 1.25rem;
 	font-style: italic;
 	}
-div.half > p { 
-	width: 50%; 
-	display: inline-block; 
-	float: left; 
-	font: 0.75 em/1.5em "Source Serif Pro", "PT Serif"; 
-	font-style: italic;
+div.half > p {
+	width: 50%;
+	display: inline-block;
+	float: left;
 	margin: 0;
 	}
 
 /* Links to finished projects */
 .actionLink {
-	background: #59deff; 
+	background: #4d80da; 
 	color: white!important; 
 	text-decoration: none; 
 	padding: 1em; 
@@ -561,15 +609,14 @@ figcaption {
   /* left: -175px; */
   /* width: 150px; */
   /* font-style: italic; */
-  color: rgba(37,37,37,0.5);
-  text-align: center;
-  font-size: 0.75em;
-  background-color: black;
-  color: white;
-  line-height: 1.5em;
-  margin-top: -0.6em;
   padding: 0.4em 1em;
-  font-family: "Source Sans Pro", "PT Serif";
+  background: #000;
+  color: #fff;
+  font-family: "SF CT", "Helvetica Neue";
+  font-size: 0.8rem;
+  line-height: 1.5rem;
+  margin-top: -0.5rem;
+  text-align: center;
   }
 
 
@@ -643,11 +690,10 @@ featured:hover {
 
 .art-list-title {
   font-size: 3em;
+  font-family: "SF UID", "Helvetica Neue";
   line-height: 1em;
-  font-weight: 700;
-  font-family: "Gotham", "Helvetica Neue";
-  padding-top: 1em;
   margin: 0;
+  padding-top: 1em;
 }
 
 .art-list-item-title-and-time {
@@ -671,24 +717,18 @@ featured:hover {
   color: #fff;
 }
 .art-list-title a:hover {
-  color: #59deff;
+  color: #4d80da;
 }
 .art-list-item p {
-  /* 
-width: 65%;
-  float: left;
-  margin-left: 5%;
- */
-  text-align: center;
-  margin-bottom: 0;
-  font-size: 18px;
-  line-height: 24px;
-  font-family: "Source Sans Pro", "Helvetica Neue";
   color: #fff;
-  font-weight: 100;  
-  padding: 0.5em 0 1em 0; 
-  margin: 0 auto; 
-  width: 75%;
+  font-family: "SF UIT";
+  font-size: 1.2rem;
+  font-weight: 100;
+  line-height: 1.5rem;
+  margin: 0 auto;
+  padding: 0.5em 0 1em 0;
+  text-align: center;
+  width: 66%;
 }
 
 
@@ -701,14 +741,13 @@ width: 65%;
 }
 .footer,
 .footer a {
-  font-family: "Helvetica Neue", "Helvetica", sans-serif;
-  font-size: 1em;
-  text-transform: uppercase;
   color: #777;
-  font-weight: 500;
+  font-family: "SF CT", "Helvetica Neue";
+  font-size: 1.25rem;
+  text-transform: uppercase;
 }
 .footer a:hover {
-	color: #59deff!important;
+	color: #4d80da!important;
 	-webkit-transition: all .2s ease-in-out;
 	   -moz-transition: all .2s ease-in-out;
 		-ms-transition: all .2s ease-in-out; 
@@ -853,12 +892,13 @@ padding: 0;
 @media only screen (orientation: portrait), (max-width:1023px) {
 	
 	figcaption {
-		background: black; 
+		background: black;
 		position: initial;
-		color: white; 
-		width: 100%;
+		color: white;
+		width: 99%;
 		text-align: center;
 		padding: 0.75em 0 0.75em 0;
+		line-height: 1rem;
 	}
 	
 	figcaption::before {
@@ -886,7 +926,6 @@ and (max-device-width : 480px) {
   }
   logo {
     width: 100%;
-    float: none;
     padding-top: 9em;
     margin-left: -0.5em;
     width: 85vw;
@@ -952,9 +991,9 @@ and (max-device-width : 480px) {
   }
   logo {
     width: 100%;
-    float: none;
     padding-top: 9em;
     margin-left: 0em;
+    margin-bottom: 2rem;
   }
   
   .sideResume { padding-bottom: 0!important; }
@@ -993,7 +1032,7 @@ and (max-device-width : 480px) {
 
   
   .art-header {
-    height: auto;
+    height: 300px;
     padding-bottom: 100px;
     background-size: cover !important;
     background-attachment: scroll;
@@ -1057,7 +1096,11 @@ and (max-device-width : 480px) {
   }
   .art-subtitle,
   .art-time {
-    font-size: 12px;
+    font-size: 0.75em;
+    line-height: 1.5em;
+    letter-spacing: 3px;
+    width: 75%;
+    margin: 0 auto;
   }
   .nav {
     padding-top: 25px;
@@ -1083,10 +1126,10 @@ and (max-device-width : 480px) {
     margin-left: 10px;
   }
   .nav #logo h1 {
-    font-size: 12px;
+    line-height: 4rem;
   }
   .nav li a {
-    font-size: 12px;
+    line-height: 4rem;
   }
   .art-header {
     padding-bottom: 50px;
@@ -1097,6 +1140,10 @@ and (max-device-width : 480px) {
   .art-body-inner {
     padding-top: 30px;
   }
+
+  div.half > p { width: 100%; line-height: 1.5rem; margin-top: 0; margin-bottom: 2rem; } 
+  div.half > p:first-child { margin-bottom: 1rem; }
+  
   body {
     font-size: 15px;
     line-height: 24px;
@@ -1107,7 +1154,7 @@ and (max-device-width : 480px) {
   .footer {
     padding: 10px 0 20px;
   }
-  .footer a { font-size: 12px; }
+  .footer a {  line-height: 1rem;font-size: 1rem;}
   .back-to-top,
   .footer-nav {
     width: 50%;
@@ -1139,7 +1186,7 @@ and (max-device-width : 480px) {
 /*  Misc
 ================================================== */
 ::selection {
-  background: #59deff;
+  background: #4d80da;
   color: #fff;
 }
 ::-moz-selection {
